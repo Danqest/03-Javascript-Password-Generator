@@ -22,6 +22,8 @@ var keys = {
   symbol: "!@#$%^&*()_+~\`|}{[]:;?><,./-="
 }
 
+var usableCharacters = ""
+
 function generatePassword() {
   do {
     var prompt1 = prompt("Your password must contain between 8 & 128 characters, inclusive. \nEnter an integer between or equal these numbers for how long you would like your password to be:");
@@ -43,14 +45,13 @@ function generatePassword() {
 
   do {
     var prompt2 = window.confirm("Would you like to use lowercase characters in your password? \nClick 'Ok' for Yes or 'Cancel' for No.")
-    
     if (prompt2 == true) {
-      window.confirm("You've selected to use lowercase characters in your password. \nPlease continue to the next prompt.")
+      window.confirm("You've selected TO USE lowercase characters in your password. \nPlease continue to the next prompt.")
       passwordReqs[1] = 1
       passwordReqs2Complete = true
     }
     else {
-      window.confirm("You've selected to NOT use lowercase characters in your password. \nPlease continue to the next prompt.")
+      window.confirm("You've selected TO NOT USE lowercase characters in your password. \nPlease continue to the next prompt.")
       passwordReqs2Complete = true
     }
 
@@ -62,12 +63,12 @@ function generatePassword() {
     var prompt3 = window.confirm("Would you like to use uppercase characters in your password? \nClick 'Ok' for Yes or 'Cancel' for No.")
     
     if (prompt3 == true) {
-      window.confirm("You've selected to use uppercase characters in your password. \nPlease continue to the next prompt.")
+      window.confirm("You've selected TO USE uppercase characters in your password. \nPlease continue to the next prompt.")
       passwordReqs[2] = 1
       passwordReqs3Complete = true
     }
     else {
-      window.confirm("You've selected to NOT use uppercase characters in your password. \nPlease continue to the next prompt.")
+      window.confirm("You've selected TO NOT USE uppercase characters in your password. \nPlease continue to the next prompt.")
       passwordReqs3Complete = true
     }
   }
@@ -78,12 +79,12 @@ function generatePassword() {
     var prompt4 = window.confirm("Would you like to use numeric characters in your password? \nClick 'Ok' for Yes or 'Cancel' for No.")
     
     if (prompt4 == true) {
-      window.confirm("You've selected to use numeric characters in your password. \nPlease continue to the next prompt.")
+      window.confirm("You've selected TO USE numeric characters in your password. \nPlease continue to the next prompt.")
       passwordReqs[3] = 1
       passwordReqs4Complete = true
     }
     else {
-      window.confirm("You've selected to NOT use numeric characters in your password. \nPlease continue to the next prompt.")
+      window.confirm("You've selected TO NOT USE numeric characters in your password. \nPlease continue to the next prompt.")
       passwordReqs4Complete = true
     }
   }
@@ -94,12 +95,12 @@ function generatePassword() {
     var prompt5 = window.confirm("Would you like to use special characters in your password? \nClick 'Ok' for Yes or 'Cancel' for No.")
     
     if (prompt5 == true) {
-      window.confirm("You've selected to use special characters in your password. \nPlease continue to the next prompt.")
+      window.confirm("You've selected TO USE special characters in your password. \nPlease continue to the next prompt.")
       passwordReqs[4] = 1
       passwordReqs5Complete = true
     }
     else {
-    window.confirm("You've selected to NOT use special characters in your password. \nPlease continue to the next prompt.")
+    window.confirm("You've selected TO NOT USE special characters in your password. \nPlease continue to the next prompt.")
     passwordReqs5Complete = true
     }
   }
@@ -107,20 +108,23 @@ function generatePassword() {
 
 
   var password = Array.from({length: passwordReqs[0]})
-  var usableCharacters = ""
-
-  if (passwordReqs[1] = true) {
+  console.log(usableCharacters)
+  if (passwordReqs[1] == true) {
     usableCharacters = usableCharacters.concat(keys['lowerCase'])
   }
-  if (passwordReqs[2] = true) {
+  console.log(usableCharacters)
+  if (passwordReqs[2] == true) {
     usableCharacters = usableCharacters.concat(keys['upperCase'])
   }
-  if (passwordReqs[3] = true) {
+  console.log(usableCharacters)
+  if (passwordReqs[3] == true) {
     usableCharacters = usableCharacters.concat(keys['number'])
   }
-  if (passwordReqs[4] = true) {
+  console.log(usableCharacters)
+  if (passwordReqs[4] == true) {
     usableCharacters = usableCharacters.concat(keys['symbol'])
   }
+  console.log(usableCharacters)
   
 
   usableCharacters = usableCharacters.split("")
