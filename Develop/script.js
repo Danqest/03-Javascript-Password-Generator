@@ -123,10 +123,9 @@ function generatePassword() {
   }
   
 
-  console.log(usableCharacters)
   usableCharacters = usableCharacters.split("")
 
-
+// Fisher-Yates shuffle algorithm for an array, taken from google search "javascript shuffle array"
   for(let i = usableCharacters.length-1; i > 0; i--) {
     const j = Math.floor(Math.random() * i)
     const temp = usableCharacters[i]
@@ -134,8 +133,15 @@ function generatePassword() {
     usableCharacters[j] = temp
   }
 
-  console.log(usableCharacters)
 
+  for (index=0; index < password.length; index++) {
+    password[index] = usableCharacters[Math.floor(Math.random() * usableCharacters.length)]
+  }
+
+  password = password.join('')
+
+
+  return password
 
 }
 
