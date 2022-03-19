@@ -15,11 +15,11 @@ var passwordReqs4Complete = false
 var passwordReqs5Complete = false
 
 // define the usable characters
-const keys = {
+var keys = {
   lowerCase: "abcdefghijklmnopqrstuvwxyz",
   upperCase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
   number: "0123456789",
-  symbol: "!@#$%^&*()_+~\\`|}{[]:;?><,./-="
+  symbol: "!@#$%^&*()_+~\`|}{[]:;?><,./-="
 }
 
 function generatePassword() {
@@ -105,6 +105,36 @@ function generatePassword() {
   }
   while (passwordReqs5Complete != true)
 
+
+  var password = Array.from({length: passwordReqs[0]})
+  var usableCharacters = ""
+
+  if (passwordReqs[1] = true) {
+    usableCharacters = usableCharacters.concat(keys['lowerCase'])
+  }
+  if (passwordReqs[2] = true) {
+    usableCharacters = usableCharacters.concat(keys['upperCase'])
+  }
+  if (passwordReqs[3] = true) {
+    usableCharacters = usableCharacters.concat(keys['number'])
+  }
+  if (passwordReqs[4] = true) {
+    usableCharacters = usableCharacters.concat(keys['symbol'])
+  }
+  
+
+  console.log(usableCharacters)
+  usableCharacters = usableCharacters.split("")
+
+
+  for(let i = usableCharacters.length-1; i > 0; i--) {
+    const j = Math.floor(Math.random() * i)
+    const temp = usableCharacters[i]
+    usableCharacters[i] = usableCharacters[j]
+    usableCharacters[j] = temp
+  }
+
+  console.log(usableCharacters)
 
 
 }
