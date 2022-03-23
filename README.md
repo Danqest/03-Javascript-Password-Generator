@@ -6,4 +6,4 @@ The project involves modifying starter javascript code and comes with pre-suppli
 
 A link to the deployed application can be located at: https://danqest.github.io/03-Javascript-Password-Generator/
 
-![example-screenshot](https://github.com/Danqest/02-Advanced-CSS-Portfolio/blob/main/assets/images/password-generator.png)
+![password-generator](https://github.com/Danqest/03-Javascript-Password-Generator/blob/main/assets/images/password-generator.png)
