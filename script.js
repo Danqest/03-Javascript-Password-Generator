@@ -56,13 +56,13 @@ function generatePassword() {
     do {
       var prompt2 = window.confirm("Would you like to use lowercase characters in your password? \nClick 'Ok' for Yes or 'Cancel' for No.")
       if (prompt2 == true) {
-        window.confirm("You've selected TO USE lowercase characters in your password. \nPlease continue to the next prompt.")
+        window.alert("You've selected TO USE lowercase characters in your password. \nPlease continue to the next prompt.")
         // notes to use lowercase by setting requirements array's boolean to true
         passwordReqs[1] = 1
         passwordReqs2Complete = true
       }
       else {
-        window.confirm("You've selected TO NOT USE lowercase characters in your password. \nPlease continue to the next prompt.")
+        window.alert("You've selected TO NOT USE lowercase characters in your password. \nPlease continue to the next prompt.")
         passwordReqs2Complete = true
       }
   
@@ -74,13 +74,13 @@ function generatePassword() {
       var prompt3 = window.confirm("Would you like to use uppercase characters in your password? \nClick 'Ok' for Yes or 'Cancel' for No.")
       
       if (prompt3 == true) {
-        window.confirm("You've selected TO USE uppercase characters in your password. \nPlease continue to the next prompt.")
+        window.alert("You've selected TO USE uppercase characters in your password. \nPlease continue to the next prompt.")
         // notes to use uppercase by setting requirements array's boolean to true
         passwordReqs[2] = 1
         passwordReqs3Complete = true
       }
       else {
-        window.confirm("You've selected TO NOT USE uppercase characters in your password. \nPlease continue to the next prompt.")
+        window.alert("You've selected TO NOT USE uppercase characters in your password. \nPlease continue to the next prompt.")
         passwordReqs3Complete = true
       }
     }
@@ -91,13 +91,13 @@ function generatePassword() {
       var prompt4 = window.confirm("Would you like to use numeric characters in your password? \nClick 'Ok' for Yes or 'Cancel' for No.")
       
       if (prompt4 == true) {
-        window.confirm("You've selected TO USE numeric characters in your password. \nPlease continue to the next prompt.")
+        window.alert("You've selected TO USE numeric characters in your password. \nPlease continue to the next prompt.")
         // notes to use numbers by setting requirements array's boolean to true
         passwordReqs[3] = 1
         passwordReqs4Complete = true
       }
       else {
-        window.confirm("You've selected TO NOT USE numeric characters in your password. \nPlease continue to the next prompt.")
+        window.alert("You've selected TO NOT USE numeric characters in your password. \nPlease continue to the next prompt.")
         passwordReqs4Complete = true
       }
     }
@@ -108,13 +108,13 @@ function generatePassword() {
       var prompt5 = window.confirm("Would you like to use special characters in your password? \nClick 'Ok' for Yes or 'Cancel' for No.")
       
       if (prompt5 == true) {
-        window.confirm("You've selected TO USE special characters in your password. \nPlease continue to the next prompt.")
+        window.alert("You've selected TO USE special characters in your password. \nPlease continue to the next prompt.")
         // notes to use symbols by setting requirements array's boolean to true
         passwordReqs[4] = 1
         passwordReqs5Complete = true
       }
       else {
-      window.confirm("You've selected TO NOT USE special characters in your password. \nPlease continue to the next prompt.")
+      window.alert("You've selected TO NOT USE special characters in your password. \nPlease continue to the next prompt.")
       passwordReqs5Complete = true
       }
     }
